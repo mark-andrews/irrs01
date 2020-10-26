@@ -1,4 +1,4 @@
-# Introduction to R
+# Introduction to statistics using R and Rstudio
 
 In this two day course, we provide a comprehensive introduction to R and how it can be used for data science and statistics. We begin by providing a thorough introduction to RStudio, which is the most popular and powerful interfaces for using R. We then introduce all the fundamentals of the R language and R environment: variables and assignment, data structures, operators, functions, scripts, packages, projects, etc. We then provide an introduction to data processing and formatting (aka, data wrangling), an introduction to data visualization, an introduction to RMarkdown, and introduce how to some of the most widely used statistical methods such as linear regression, Anovas, etc. From this course, you will gain a comprehensive introduction to R, which will serve as foundation for progressing further with R to any kind of data analysis, data science, or statistics.
 
