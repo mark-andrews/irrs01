@@ -14,9 +14,9 @@ Teaching will be done online via video link using Zoom. Although not strictly re
 
 The course will take place online using Zoom. On each day, the live video broadcasts will occur between (*UK local time; Greenwich Mean Time ; UTC+0*) at:
 
-• 12pm-2pm
-• 3pm-5pm
-• 6pm-8pm
+* 12pm-2pm
+* 3pm-5pm
+* 6pm-8pm
 
 ## Assumed quantitative knowledge
 
