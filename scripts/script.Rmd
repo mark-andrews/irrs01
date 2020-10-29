@@ -1,0 +1,76 @@
+---
+title: "My first rmarkdown"
+author: "Mark Andrews"
+date: "29/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+```{r primes}
+primes <- c(2, 3, 5, 7, 11, 13)
+sum(primes)
+```
+
+```{r primes_sq}
+primes^2 
+```
+
+# Load up the `tidyverse`
+
+The following code will load up the `tidyverse` package, which is a package of packages.
+
+```{r load_packages}
+library(tidyverse)
+```
+
+## Load the data
+
+This will load a data frame from a URL.
+```{r load_data}
+weight_df <- read_csv("https://tinyurl.com/irss01weight")
+```
+
+This data frame has `r nrow(weight_df)` observations and `r ncol(weight_df)` variables.
+
+## A scatterplot
+
+The following *scatterplot* will **show** each person's weight as function of their height, and show the lines of best fit. 
+
+```{r scatterplot, echo=FALSE}
+ggplot(weight_df,
+       mapping = aes(x = height, y = weight, colour = gender)
+) + geom_point(size = 0.5, alpha = 0.5) + 
+  stat_smooth(method = 'lm', se = F, fullrange = T) +
+  theme_classic()
+```
+
+## Look at the data 
+
+```{r show_data}
+weight_df
+```
+
+## Variables names
+
+This data has variables:
+
+* gender
+* weight
+* height
+* etc
+
+1. gender
+1. weight
+1. height
+1. etc
+
+## We love math(s)
+
+$$
+y_i = \alpha + \beta x + \gamma_k^2 + \psi^2 + \Omega_k
+$$
