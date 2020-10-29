@@ -8,4 +8,4 @@
 
 * [12pm-2pm](https://vimeo.com/473444913)
 * [3pm-5pm](https://vimeo.com/473523300)
-* 6pm-8pm
+* [6pm-8pm](https://vimeo.com/473585915)
