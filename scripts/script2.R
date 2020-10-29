@@ -69,3 +69,59 @@ weight_df_1 <- select(weight_df, gender, weight, height)
 filter(weight_df_1, height > 180)
   
 
+# data viz ----------------------------------------------------------------
+# scatterplot
+ggplot(weight_df,
+       mapping = aes(x = height, y = weight)
+) + geom_point(size = 1.0, alpha = 0.5) 
+
+# scatterplot for each gender
+ggplot(weight_df,
+       mapping = aes(x = height, y = weight, colour = gender)
+) + geom_point(size = 1.0) 
+
+# scatterplot smoother
+ggplot(weight_df,
+       mapping = aes(x = height, y = weight)
+) + geom_point(size = 1.0, alpha = 0.5) + 
+  stat_smooth(method = 'lm', se = F, colour = 'red')
+
+# scatterplot for each gender
+ggplot(weight_df,
+       mapping = aes(x = height, y = weight, colour = gender)
+) + geom_point(size = 0.5, alpha = 0.5) + 
+  stat_smooth(method = 'lm', se = F, fullrange = T) +
+  theme_bw()
+
+# histogram of height
+ggplot(weight_df, mapping = aes(x = height)) +
+  geom_histogram(binwidth = 2, colour = 'white')
+
+# histogram of height by gender
+ggplot(weight_df, mapping = aes(x = height, fill = gender)) +
+  geom_histogram(binwidth = 2, colour = 'white') 
+
+# histogram of height by gender
+# dodge histogram
+ggplot(weight_df, 
+       mapping = aes(x = height, fill = gender)) +
+  geom_histogram(binwidth = 2, 
+                 position = 'dodge',
+                 colour = 'white') 
+
+# histogram of height by gender
+# identity histogram
+ggplot(weight_df, 
+       mapping = aes(x = height, fill = gender)) +
+  geom_histogram(binwidth = 2, 
+                 alpha = 0.75, 
+                 position = 'identity',
+                 colour = 'white')
+
+
+# tukey box plot
+ggplot(weight_df,
+       mapping = aes(y = weight, x = gender)
+) + geom_boxplot(width = 0.25, outlier.size = 0.5)
+
+
